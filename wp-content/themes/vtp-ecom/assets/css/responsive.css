@@ -1,0 +1,626 @@
+
+@media (max-width: 1440px) {
+    .ar-swip.swiper-button-prev {
+        left: 12.5%;
+    }
+    .ar-swip.swiper-button-next {
+        right: 12.5%;
+    }
+    .ar-swip {
+        top: calc(50% - 40px);
+        margin: 0;
+    }
+    .txt-about h1 {
+        font-size: 40px;
+    }
+
+    .title h2 {
+        font-size: 40px;
+    }
+
+    .title a {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    main {
+        overflow-x: hidden;
+    }
+
+    .item-new-home h3 a {
+        font-size: 30px;
+    }
+    .item-banner h2 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .h-menu {
+        padding-right: 0;
+        font-size: 13px;
+    }
+    .header-top {
+        padding: 10px 0;
+    }
+
+    .box-search input {
+        height: 35px;
+    }
+
+    .box-search button {
+        top: 4px;
+    }
+
+    .item-banner h2 {
+        font-size: 25px;
+    }
+
+    .item-banner .date-banner {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .ar-swip {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        top: calc(50% - 15px);
+    }
+    .txt-about h1 {
+        font-size: 30px;
+    }
+
+    .txt-about {
+        font-size: 14px;
+    }
+
+    .title h2 {
+        font-size: 30px;
+    }
+
+    .title a {
+        font-size: 16px;
+    }
+
+    .list-prd .row .col-md-4 {
+        padding: 0 7px;
+    }
+
+    .list-prd .row {
+        margin: 0 -7px;
+    }
+
+    .box-video .title h2 {
+        font-size: 30px;
+    }
+
+    .play-video img {
+        width: 50px;
+    }
+
+    .slide-news .slick-arrow {
+        left: 15px;
+    }
+
+    .slide-news .slick-arrow.next {
+        left: 65px;
+    }
+
+    .slide-news {
+        padding: 20px 15px 0 15px;
+    }
+
+    .contact-home h2 {
+        font-size: 30px;
+    }
+
+    .contact-home .col-md-8 {
+        padding-left: 0;
+    }
+    .social li {
+        margin: 0 !important;
+    }
+
+    .item-ft .social a {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .item-new-home h3 a {
+        font-size: 20px;
+        display: block;
+    }
+    .banner-about .info {
+        padding: 20px 0;
+    }
+
+    .banner-about .info h1 {
+        font-size: 30px;
+    }
+
+    .detail-title h1 {
+        font-size: 25px;
+        line-height: initial;
+    }
+    .contact-info {
+        margin-top: 40px;
+    }
+    .item-news .info .desc {
+        display: none;
+    }
+
+    .new-bigs .info .desc {
+        display: table-column;
+    }
+
+    .new-bigs .info a {
+        font-size: 20px;
+    }
+
+    .item-news .info a {
+        font-size: 18px;
+    }
+    .info-preview {
+        padding-left: 0;
+    }
+
+    .info-preview h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .bread a {
+        font-size: 18px;
+    }
+
+    .bread li:after {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .box-about {
+        padding: 30px 0;
+    }
+
+    .txt-about h1 {
+        font-size: 25px;
+    }
+
+    .txt-about .btn-main {
+        padding: 15px 0 25px 0;
+    }
+
+    .txt-about .btn-main a {
+        height: 40px;
+    }
+    .box-prd {
+        padding: 15px 0;
+    }
+
+    .title h2 {
+        font-size: 25px;
+    }
+
+    .title a {
+        font-size: 14px;
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .box-prd {
+        padding: 20px 0;
+    }
+
+    .title h2 {
+        font-size: 20px;
+    }
+
+    .title a {
+        font-size: 14px;
+    }
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .title .col-md-6 {width: auto;}
+
+    .title .row {
+        justify-content: space-between;
+    }
+    .box-video .title h2 {
+        font-size: 20px;
+    }
+
+    .play-video img {
+        width: 35px;
+    }
+
+    .box-video {
+        padding: 20px 0;
+    }
+
+    .slide-news .slick-arrow img {
+        width: 25px;
+    }
+
+    .slide-news .slick-arrow {
+        left: 20px;
+        top: -13px;
+    }
+
+    .box-news {
+        padding-bottom: 15px;
+    }
+
+    .slide-news {
+        padding-left: 15px;
+    }
+
+    .item-new-home .info {
+        padding: 10px;
+    }
+
+    .item-new-home .more-n {
+        display: none;
+    }
+
+    .date-home {
+        display: none;
+    }
+
+    .item-new-home h3 a {
+        font-size: 15px;
+        display: block;
+    }
+
+    .contact-home {
+        padding: 15px 0;
+    }
+
+    .contact-home h2 {
+        font-size: 20px;
+    }
+
+    .contact-home .avarta {
+        display: none;
+    }
+    .txt-about {
+        max-width: 100%;
+    }
+    .box-banner {
+        padding: 0;
+    }
+
+    .item-banner .caption {
+        padding: 15px;
+    }
+
+    .item-banner .date-banner {
+        font-weight: 500;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .item-banner h2 {
+        font-size: 20px;
+    }
+
+    .ar-swip {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+        top: calc(50% - 20px);
+    }
+
+    .ar-swip.swiper-button-next {
+        right: 10px;
+    }
+
+    .ar-swip.swiper-button-prev {
+        left: 10px;
+    }
+
+    .item-banner .caption .info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .item-banner .caption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item-banner {
+        border-radius: 0;
+    }
+    .banner-about img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .banner-about .info {
+        padding: 10px 0;
+    }
+
+    .banner-about .info h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .detail {
+        padding: 25px 0;
+    }
+
+    .detail-title h1 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .detail-title .date-author {
+        padding-bottom: 10px;
+    }
+    .contact-info {
+        margin-top: 15px;
+    }
+
+    .contact-info .top {
+        padding: 25px 15px 0 15px;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .contact-info h1 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .frm-contact {
+        padding: 15px;
+    }
+
+    .frm-contact .txt-ctn {
+        height: 45px;
+    }
+
+    .frm-contact label {
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .frm-contact .row > div {
+        margin-bottom: 15px;
+    }
+
+    .frm-contact textarea {
+        height: 100px;
+    }
+
+    .contact {
+        padding-bottom: 15px;
+    }
+
+    .frm-contact .btn-contact {
+        height: 45px;
+        font-size: 14px;
+    }
+    .news {
+        padding: 15px 0;
+    }
+
+    .list-news .row > div {
+        padding: 0 12px;
+        margin-bottom: 15px;
+    }
+
+    .new-bigs .info .desc {
+        display: none;
+    }
+
+    .new-bigs .info a {
+        font-size: 18px;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+
+    .new-bigs .info {
+        padding: 15px;
+    }
+
+    .item-news .info {
+        padding: 10px;
+    }
+
+    .item-news .info a {
+        font-size: 20px;
+    }
+    .list-prd .row .col-md-6 {
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    .list-prd .row {
+        margin: 0 -15px;
+    }
+
+    .item-prd .info {
+        padding: 10px;
+    }
+
+    .item-prd .info a {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .product {
+        padding: 15px 0;
+    }
+    .bread a {font-size: 15px;font-weight: 500;}
+
+    .bread li:after {
+        font-size: 15px;
+        font-weight: normal;
+        top: 0;
+    }
+
+    .bread {
+        margin-bottom: 15px;
+    }
+
+    .info-preview {
+        padding: 20px 0 0 0;
+    }
+
+    .info-preview h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .info-preview .btn-main {
+        padding: 15px 0;
+    }
+
+    .info-preview .btn-main a {
+        height: 40px;
+    }
+    footer {
+        padding: 25px 0 15px 0;
+    }
+
+    .item-ft .logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-top .col-md-3 {
+        margin-bottom: 30px;
+    }
+
+    .footer-top .col-md-3:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-bott {
+        padding-top: 15px;
+        text-align: center;
+        border-top: 1px solid #fff;
+        margin-top: 15px;
+    }
+    .header-mobile {
+        background: #ee0033;
+        padding: 10px 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+        position: fixed;
+        display: block !important;
+    }
+
+    .header-mobile .header a {
+        font-size: 21px;
+        color: #fff;
+    }
+
+    .header-top {
+        display: none;
+    }
+
+    main {
+        margin-top: 51px;
+    }
+    nav#menu {
+        z-index: 1002;
+        display: none;
+    }
+
+    nav#menu.mm-menu_opened {
+        display: block;
+    }
+
+    li.mm-listitem input {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        border: 1px solid #ee0033;
+    }
+
+    li.mm-listitem button {
+        width: 40px;
+        height: 40px;
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+    }
+    .title .title-news {
+        font-size: 14px;
+        padding: 0 10px;
+        height: 30px;
+    }
+
+    .title .title-news i {
+        padding-left: 5px;
+    }
+    .content-popup iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width:  575px) {
+    .list-prd .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .list-prd .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+    .box-prd .list-prd .row .col-md-4 {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width:  767px) and (min-width: 576px) {
+    .list-prd .row .col-md-4 {
+        padding: 0 7px;
+    }
+
+    .list-prd .row {
+        margin: 0 -7px;
+    }
+
+    .item-prd .info a {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .item-prd .info {
+        padding: 10px;
+    }
+    .item-news .desc {
+        display: none;
+    }
+
+    .item-news .info a {
+        font-size: 18px;
+    }
+
+    .list-news .row .col-md-4 {
+        padding: 0 7px;
+    }
+    .new-bigs .info .desc {
+        display: block;
+    }
+    .list-prd .row .col-md-6 {
+        padding: 0 7px;
+    }
+    .info-preview {
+        padding-top: 0;
+    }
+}
