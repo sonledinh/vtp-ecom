@@ -54,41 +54,97 @@
 
 
 @font-face {
-    font-family: 'Magistral';
-    src: url('../fonts/mag/Magistral-Regular2.woff2') format('woff2'),
-        url('../fonts/mag/Magistral-Regular2.woff') format('woff');
+    font-family: 'FSMagistral';
+    src: url('../fonts/mag/FSMagistralBoldItalic.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FSMagistral Book';
+    src: url('../fonts/mag/FSMagistralBookItalic.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralBookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FSMagistral';
+    src: url('../fonts/mag/FSMagistralBold.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FSMagistral Book';
+    src: url('../fonts/mag/FSMagistralBook.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralBook.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Magistral';
-    src: url('../fonts/mag/Magistral-Regular4.woff2') format('woff2'),
-        url('../fonts/mag/Magistral-Regular4.woff') format('woff');
-    font-weight: normal;
+    font-family: 'FSMagistral Extra';
+    src: url('../fonts/mag/FSMagistralExtraBold.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralExtraBold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Magistral';
-    src: url('../fonts/mag/Magistral-Regular3.woff2') format('woff2'),
-        url('../fonts/mag/Magistral-Regular3.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'FSMagistral';
+    src: url('../fonts/mag/FSMagistralMediumItalic.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralMediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Magistral';
-    src: url('../fonts/mag/Magistral-Medium.woff2') format('woff2'),
-        url('../fonts/mag/Magistral-Medium.woff') format('woff');
+    font-family: 'FSMagistral Extra';
+    src: url('../fonts/mag/FSMagistralExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FSMagistral';
+    src: url('../fonts/mag/FSMagistralMedium.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralMedium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'FSMagistral';
+    src: url('../fonts/mag/FSMagistralLightItalic.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FSMagistral';
+    src: url('../fonts/mag/FSMagistralLight.woff2') format('woff2'),
+        url('../fonts/mag/FSMagistralLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+ 
+
+
 .f-fs {
-    font-family: 'Magistral';
+    font-family: 'FSMagistral';
 }

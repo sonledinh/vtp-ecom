@@ -18,25 +18,7 @@
 					<div class="frm-contact">
 						<div class="item">
 							<div class="row">
-								<div class="col-md-6">
-									<label>Tên*</label>
-									<input type="text" class="txt-ctn">
-								</div>
-								<div class="col-md-6">
-									<label>Số điện thoại*</label>
-									<input type="text" class="txt-ctn">
-								</div>
-								<div class="col-md-6">
-									<label>Email*</label>
-									<input type="text" class="txt-ctn">
-								</div>
-								<div class="col-md-12">
-									<label>Nội dung</label>
-									<textarea name="" id="" cols="30" rows="10"></textarea>
-								</div>
-								<div class="col-md-12">
-									<input type="submit" value="SEND MESSAGE" class="btn-contact">
-								</div>
+								<?php echo do_shortcode('[contact-form-7 id="135" title="Contact"]'); ?>
 							</div>
 						</div>
 					</div>

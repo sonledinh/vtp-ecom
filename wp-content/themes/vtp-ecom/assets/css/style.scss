@@ -119,7 +119,7 @@ body {
     }
 }
 .pagination {
-    a {
+    a, span {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -130,7 +130,7 @@ body {
         color: #9A9AB0;
         font-size: 16px;
         font-weight: 700;
-        &.active, &:hover {
+        &.active, &:hover, &.current {
             color: $red;
             border: 2px solid $red;
         }
@@ -292,7 +292,7 @@ body {
     }
 }
 .pagination-news {
-    a {
+    a, span {
         color: #6A798C;
         display: flex;
         align-items: center;
@@ -301,7 +301,7 @@ body {
         height: 34px;
         border-radius: 5px;
         border: 1px solid #6A798C;
-        &.active, &:hover {
+        &.active, &:hover, &.current {
             color: #fff;
             background: $red;
             border: 1px solid $red;
@@ -395,6 +395,9 @@ body {
 }
 .frm-contact {
     padding: 30px;
+    br {
+        display: none;
+    }
     label {
         display: block;
         font-size: 16px;
@@ -417,6 +420,7 @@ body {
         border: 1.52381px solid #D9E3E8;
         border-radius: 8px;
         height: 220px;
+        outline: none !important;
     }
     .row {
         >div {
@@ -767,4 +771,22 @@ body {
         width: 100%;
         height: 500px;
     }
+}
+.page-numbers {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    li {
+        margin-right: .5rem;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+img.alignright {
+    float: right;
+    padding-left: 30px;
 }

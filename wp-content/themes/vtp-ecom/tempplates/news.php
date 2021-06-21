@@ -1,5 +1,28 @@
 <?php /* Template Name: Tin tức */ ?>
-<?php get_header(); ?>
+<?php 
+$query = $_SERVER['QUERY_STRING'];
+// echo $query;
+if ($query) {
+    $key = substr($query, 8);
+    $args=array(
+        'post_type' => 'post',
+        'orderby'   => 'publish_date',
+        'order'     => 'DESC',
+        'paged'     => get_query_var('paged') ? get_query_var('paged') : 1,
+        'posts_per_page' => 100,
+        's' => $key,
+    );
+}else{
+	$args=array(
+        'post_type' => 'post',
+        'orderby'   => 'publish_date',
+        'order'     => 'DESC',
+        'paged'     => get_query_var('paged') ? get_query_var('paged') : 1,
+        'posts_per_page' => 8,
+    );
+}
+get_header(); 
+?>
 
 <main> 
 	<section class="news">
@@ -7,15 +30,8 @@
 			<div class="list-news">
 				<div class="row">
 					<?php 
-                        $args=array(
-                            'post_type' => 'post',
-                            'orderby'   => 'publish_date',
-                            'order'     => 'DESC',
-                            'paged'     => get_query_var('paged') ? get_query_var('paged') : 1,
-                            'posts_per_page' => 8,
-                        );
+                        
                         $my_query = new wp_query($args);
-                        $max_num_pages = $my_query->max_num_pages;
                     ?>
                     <?php $i = 0; ?>
                     <?php if ( $my_query->have_posts() ): ?>
@@ -26,7 +42,7 @@
 									<div class="new-bigs">
 										<div class="avarta">
 											<a href="<?php echo get_the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" class="img-fluid w-100" alt=""></a>
-											<div class="date"><span>25</span><label class="text-uppercase">AUG</label></div>
+											<div class="date"><span><?php echo get_the_date( 'd' ); ?></span><label class="text-uppercase"><?php echo get_the_date( 'F ' ); ?></label></div>
 										</div>
 										<div class="info">
 											<h1><a href="<?php echo get_the_permalink() ?>" class="f-fs"><?php echo get_the_title(); ?></a></h1>
@@ -41,7 +57,7 @@
 									<div class="item-news">
 										<div class="avarta">
 											<a href="<?php echo get_the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" class="img-fluid w-100" alt=""></a>
-											<div class="date"><span>25</span><label class="text-uppercase">AUG</label></div>
+											<div class="date"><span><?php echo get_the_date( 'd' ); ?></span><label class="text-uppercase"><?php echo get_the_date( 'F ' ); ?></label></div>
 										</div>
 										<div class="info">
 											<h3><a href="<?php echo get_the_permalink() ?>" calss="f-fs"><?php echo get_the_title(); ?></a></h3>
@@ -71,8 +87,8 @@
 										'base' => get_pagenum_link(1) . '%_%',
 										'current' => $current_page,
 										'total' => $total_pages,
-										'prev_text' => '&laquo;',
-										'next_text' => 'Next',
+										'prev_text' => '<<',
+										'next_text' => '>>',
 										'type' => 'list'
 									));
 								}

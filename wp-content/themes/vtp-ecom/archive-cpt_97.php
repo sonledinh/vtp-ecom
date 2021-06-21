@@ -1,7 +1,7 @@
 <?php /* Template Name: Sản phẩm */ ?>
 <?php get_header(); ?>
 
-<main>
+<main> 
 	<section class="product">
 		<div class="container">
 			<div class="list-prd">
@@ -39,7 +39,7 @@
 					<li class="list-inline-item"><a href="">4</a></li>
 				</ul> -->
 
-				<?php 
+				<?php  
 					$total_pages = $my_query->max_num_pages;
 					if ($total_pages > 1){
 						$current_page = max(1, get_query_var('paged'));
@@ -47,14 +47,14 @@
 							'base' => get_pagenum_link(1) . '%_%',
 							'current' => $current_page,
 							'total' => $total_pages,
-							'prev_text' => '&laquo;',
-							'next_text' => 'Next',
+							'prev_text' => '<<',
+							'next_text' => '>>',
 							'type' => 'list'
 						));
 					}
 				?>
 			</div>
-		</div> 
+		</div>  
 	</section>
 </main>
 

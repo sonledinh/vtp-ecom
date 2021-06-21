@@ -1,7 +1,7 @@
 <?php /* Template Name: Trang chủ */ ?>
 <?php get_header(); ?>
 <main>
-	<section class="box-banner">
+	<section class="box-banner"> 
 		<div class="swiper-container">
 		    <div class="swiper-wrapper">
 		    	<?php while ( has_sub_field('slide_banner' )) : ?>
@@ -56,33 +56,29 @@
 			</div>
 			<div class="list-prd">
 				<div class="row">
-					<div class="col-md-4 col-sm-4">
-						<div class="item-prd">
-							<div class="avarta"><a href="product-detail.php"><img src="<?php echo __BASE_URL__ ?>/images/prd-1.png" class="img-fluid w-100" alt=""></a></div>
-							<div class="info text-center">
-								<h3><a href="product-detail.php">Thương mại</a></h3>
-								<div class="desc">3000+ sản phẩm</div>
+					<?php
+						$args=array(
+	                        'post_type' => 'cpt_97',
+	                        'orderby'   => 'publish_date',
+	                        'order'     => 'DESC',
+	                        'posts_per_page' => 3,
+	                    );
+	                    $my_query = new wp_query($args);
+					?> 
+					<?php if ( $my_query->have_posts() ): ?>
+	                    <?php while ($my_query->have_posts()):$my_query->the_post(); ?>
+
+	                    	<div class="col-md-4 col-sm-4">
+								<div class="item-prd">
+									<div class="avarta"><a href="<?php echo get_the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url() ?>" class="img-fluid w-100" alt=""></a></div>
+									<div class="info text-center">
+										<h3><a href="<?php echo get_the_permalink() ?>p"><?php echo get_the_title(); ?></a></h3>
+										<div class="desc"><?php echo the_field('numb_prd') ?></div>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="item-prd">
-							<div class="avarta"><a href="product-detail.php"><img src="<?php echo __BASE_URL__ ?>/images/prd-2.png" class="img-fluid w-100" alt=""></a></div>
-							<div class="info text-center">
-								<h3><a href="product-detail.php">Vé máy bay</a></h3>
-								<div class="desc">3000+ sản phẩm</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="item-prd">
-							<div class="avarta"><a href="product-detail.php"><img src="<?php echo __BASE_URL__ ?>/images/prd-3.png" class="img-fluid w-100" alt=""></a></div>
-							<div class="info text-center">
-								<h3><a href="product-detail.php">Văn phòng phẩm</a></h3>
-								<div class="desc">3000+ sản phẩm</div>
-							</div>
-						</div>
-					</div>
+	                    <?php endwhile ?>
+	                <?php endif;wp_reset_query(); ?>
 				</div>
 			</div>
 		</div>
@@ -161,14 +157,7 @@
 					<div class="left">
 						<h2 class="f-fs"><?php echo the_field('title_ctn') ?></h2>
 						<div class="form-ctn-home">
-							<div class="item"><input type="text" class="txt-inp" placeholder="Tên (*)"></div>
-							<div class="item"><input type="text" class="txt-inp" placeholder="SĐT (*)"></div>
-							<div class="item"><input type="text" class="txt-inp" placeholder="Email (*)"></div>
-							<div class="item"><textarea placeholder="Nội dung (*)"></textarea></div>
-							<div class="item">
-								<p>Chúng tôi cam kết mọi thông tin của bạn đều được bảo mật</p>
-							</div>
-							<div class="item"><input type="submit" class="btn-ctc" value="Gửi"></div>
+							<?php echo do_shortcode('[contact-form-7 id="153" title="contact-home"]'); ?>
 						</div>
 					</div>
 				</div>
@@ -180,4 +169,18 @@
 	</section>
 </main>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?>  
+
+<script>
+	$('.slide-news').slick({
+	    autoplay: false,
+	    arrow: true,
+	    dots: false,
+	    slidesToShow: 1.5,
+	    slidesToScroll: 1, 
+	    infinite: false,
+	    prevArrow: '<a href="javascript:void(0)" class="prev"><img src="<?php echo __BASE_URL__ ?>/images/ar-left.png" class="img-fluid" alt=""></a>',
+	    nextArrow: '<a href="javascript:void(0)" class="next"><img src="<?php echo __BASE_URL__ ?>/images/ar-right.png" class="img-fluid" alt=""></a>',
+	    speed: 500,
+	});  
+</script>

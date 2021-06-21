@@ -17,17 +17,7 @@ $(document).ready(function() {
   });
 }); 
 
-$('.slide-news').slick({
-    autoplay: false,
-    arrow: true,
-    dots: false,
-    slidesToShow: 1.5,
-    slidesToScroll: 1, 
-    infinite: false,
-    prevArrow: '<a href="javascript:void(0)" class="prev"><img src="images/ar-left.png" class="img-fluid" alt=""></a>',
-    nextArrow: '<a href="javascript:void(0)" class="next"><img src="images/ar-right.png" class="img-fluid" alt=""></a>',
-    speed: 500,
-});  
+
 
 $('.slider-for').slick({
     autoplay: false,

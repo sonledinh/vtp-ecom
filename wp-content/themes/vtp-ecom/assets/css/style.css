@@ -39,31 +39,67 @@
   font-style: normal;
   font-display: swap; }
 @font-face {
-  font-family: 'Magistral';
-  src: url("../fonts/mag/Magistral-Regular2.woff2") format("woff2"), url("../fonts/mag/Magistral-Regular2.woff") format("woff");
+  font-family: 'FSMagistral';
+  src: url("../fonts/mag/FSMagistralBoldItalic.woff2") format("woff2"), url("../fonts/mag/FSMagistralBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'FSMagistral Book';
+  src: url("../fonts/mag/FSMagistralBookItalic.woff2") format("woff2"), url("../fonts/mag/FSMagistralBookItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'FSMagistral';
+  src: url("../fonts/mag/FSMagistralBold.woff2") format("woff2"), url("../fonts/mag/FSMagistralBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'FSMagistral Book';
+  src: url("../fonts/mag/FSMagistralBook.woff2") format("woff2"), url("../fonts/mag/FSMagistralBook.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 @font-face {
-  font-family: 'Magistral';
-  src: url("../fonts/mag/Magistral-Regular4.woff2") format("woff2"), url("../fonts/mag/Magistral-Regular4.woff") format("woff");
-  font-weight: normal;
+  font-family: 'FSMagistral Extra';
+  src: url("../fonts/mag/FSMagistralExtraBold.woff2") format("woff2"), url("../fonts/mag/FSMagistralExtraBold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
   font-display: swap; }
 @font-face {
-  font-family: 'Magistral';
-  src: url("../fonts/mag/Magistral-Regular3.woff2") format("woff2"), url("../fonts/mag/Magistral-Regular3.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'FSMagistral';
+  src: url("../fonts/mag/FSMagistralMediumItalic.woff2") format("woff2"), url("../fonts/mag/FSMagistralMediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
   font-display: swap; }
 @font-face {
-  font-family: 'Magistral';
-  src: url("../fonts/mag/Magistral-Medium.woff2") format("woff2"), url("../fonts/mag/Magistral-Medium.woff") format("woff");
+  font-family: 'FSMagistral Extra';
+  src: url("../fonts/mag/FSMagistralExtraBoldItalic.woff2") format("woff2"), url("../fonts/mag/FSMagistralExtraBoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'FSMagistral';
+  src: url("../fonts/mag/FSMagistralMedium.woff2") format("woff2"), url("../fonts/mag/FSMagistralMedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
+@font-face {
+  font-family: 'FSMagistral';
+  src: url("../fonts/mag/FSMagistralLightItalic.woff2") format("woff2"), url("../fonts/mag/FSMagistralLightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap; }
+@font-face {
+  font-family: 'FSMagistral';
+  src: url("../fonts/mag/FSMagistralLight.woff2") format("woff2"), url("../fonts/mag/FSMagistralLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
 .f-fs {
-  font-family: 'Magistral'; }
+  font-family: 'FSMagistral'; }
 
 body {
   box-sizing: border-box;
@@ -231,7 +267,7 @@ footer {
       color: #fff;
       margin-bottom: 10px; }
 
-.pagination a {
+.pagination a, .pagination span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,7 +278,7 @@ footer {
   color: #9A9AB0;
   font-size: 16px;
   font-weight: 700; }
-  .pagination a.active, .pagination a:hover {
+  .pagination a.active, .pagination a:hover, .pagination a.current, .pagination span.active, .pagination span:hover, .pagination span.current {
     color: #EE0033;
     border: 2px solid #EE0033; }
 
@@ -375,7 +411,7 @@ footer {
   .list-news .row > div {
     padding: 12px; }
 
-.pagination-news a {
+.pagination-news a, .pagination-news span {
   color: #6A798C;
   display: flex;
   align-items: center;
@@ -384,7 +420,7 @@ footer {
   height: 34px;
   border-radius: 5px;
   border: 1px solid #6A798C; }
-  .pagination-news a.active, .pagination-news a:hover {
+  .pagination-news a.active, .pagination-news a:hover, .pagination-news a.current, .pagination-news span.active, .pagination-news span:hover, .pagination-news span.current {
     color: #fff;
     background: #EE0033;
     border: 1px solid #EE0033; }
@@ -461,6 +497,8 @@ footer {
 
 .frm-contact {
   padding: 30px; }
+  .frm-contact br {
+    display: none; }
   .frm-contact label {
     display: block;
     font-size: 16px;
@@ -480,7 +518,8 @@ footer {
     background: #F7F9FA;
     border: 1.52381px solid #D9E3E8;
     border-radius: 8px;
-    height: 220px; }
+    height: 220px;
+    outline: none !important; }
   .frm-contact .row > div {
     margin-bottom: 24px; }
     .frm-contact .row > div:last-child {
@@ -773,5 +812,21 @@ footer {
 .content-popup iframe {
   width: 100%;
   height: 500px; }
+
+.page-numbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center; }
+  .page-numbers li {
+    margin-right: .5rem; }
+    .page-numbers li:last-child {
+      margin-right: 0; }
+
+img.alignright {
+  float: right;
+  padding-left: 30px; }
 
 /*# sourceMappingURL=style.css.map */

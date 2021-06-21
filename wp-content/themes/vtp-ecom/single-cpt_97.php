@@ -6,61 +6,47 @@
 		<div class="container">
 			<ul class="list-inline f-fs ">
 				<li class="list-inline-item"><a href="index.php">Sản phẩm</a></li>
-				<li class="list-inline-item"><a href="javascript:void(0)">Vé máy bay</a></li>
+				<li class="list-inline-item"><a href="javascript:void(0)"><?php echo get_the_title() ?></a></li>
 			</ul>
 		</div>
 	</section>
 	<section class="product-detail">
-		<div class="container">
-			<div class="previews">
+		<div class="container"> 
+			<div class="previews">  
 				<div class="row">
 					<div class="col-md-6 col-sm-6">
 						<div class="thumb-preview">
+							<?php 
+			        			$thuvien = get_field('album_gall');
+			        		?>
 							<div class="slider-for">
-                                <div class="carousel-item">
-                                    <img class="" src="images/thumb.png" class="img-fluid" width="100%" alt="Third slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="" src="images/thumb.png" class="img-fluid" width="100%" alt="Third slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="" src="images/thumb.png" class="img-fluid" width="100%" alt="Third slide">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="" src="images/thumb.png" class="img-fluid" width="100%" alt="Third slide">
-                                </div>
+								<?php foreach( $thuvien as $image_id ): ?>
+                                    <div class="carousel-item">
+                                        <img class="" src="<?php echo esc_url($image_id['url']); ?>" class="img-fluid" width="100%" alt="<?php echo $image_id['url']; ?>">
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                             <div class="slider-nav">
-                                 <div class="clc">
-                                 	<div class="item"><img class="" src="images/thumb.png" width="100%" alt="Third slide"></div>
-                                 </div>
-                                 <div class="clc">
-                                 	<div class="item"><img class="" src="images/thumb.png" width="100%" alt="Third slide"></div>
-                                 </div>
-                                 <div class="clc">
-                                 	<div class="item"><img class="" src="images/thumb.png" width="100%" alt="Third slide"></div>
-                                 </div>
-                                 <div class="clc">
-                                 	<div class="item"><img class="" src="images/thumb.png" width="100%" alt="Third slide"></div>
-                                 </div>
+                            	<?php foreach( $thuvien as $image_id ): ?>
+                                    <div class="clc">
+                                     	<div class="item"><img class="" src="<?php echo esc_url($image_id['url']); ?>" width="100%" alt="<?php echo esc_url($image_id['url']); ?>"></div>
+                                     </div>
+                                <?php endforeach; ?>
                             </div>
-						</div>
-					</div>
+						</div>  
+					</div> 
 					<div class="col-md-6 col-sm-6">
 						<div class="info-preview">
-							<h1 class="f-fs">Vé máy bay</h1>
+							<h1 class="f-fs"><?php echo get_the_title(); ?></h1>
 							<div class="desc">
-								<p>Develop a website by finding a product identity that has value and branding to become a characteristic of a company. We will also facilitate the business marketing of these products with our SEO experts so that they become a ready-to-use website and help sell a product from the company.</p>
-								<p>Develop a website by finding a product identity that has value and branding to become a characteristic of a company. We will also facilitate the business marketing of these products with our SEO experts so that they become a ready-to-use website and help sell a product from the company.</p>
-								<p>Develop a website by finding a product identity that has value and branding to become a characteristic of a company. We will also facilitate the business marketing.</p>
+								<?php echo the_content(); ?>
 							</div>
-							<div class="btn-main"><a href="">Tìm hiểu thêm</a></div>
+							<div class="btn-main"><a href="<?php echo the_field('tim_hieu_them') ?>">Tìm hiểu thêm</a></div>
 							<div class="social">
-								<ul class="list-inline">
-									<li class="list-inline-item"><a href=""><img src="images/sc-1.png" class="img-fluid" alt=""></a></li>
-									<li class="list-inline-item"><a href=""><img src="images/sc-2.png" class="img-fluid" alt=""></a></li>
-									<li class="list-inline-item"><a href=""><img src="images/sc-3.png" class="img-fluid" alt=""></a></li>
-									<li class="list-inline-item"><a href=""><img src="images/sc-4.png" class="img-fluid" alt=""></a></li>
+								<ul class="list-inline"> 
+									<?php while ( has_sub_field('mxh_prd' )) : ?>
+										<li class="list-inline-item"><a href="<?php echo get_sub_field( 'link_lien_kết' ); ?>"><img src="<?php echo get_sub_field( 'icon_lien_kết' )['url']; ?>" class="img-fluid" alt=""></a></li>
+									<?php endwhile; ?>
 								</ul>
 							</div>
 						</div>
